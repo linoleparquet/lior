@@ -9,11 +9,14 @@ import fr.lino.layani.lior.exception.DoctorNotFoundException;
 import fr.lino.layani.lior.model.Doctor;
 import fr.lino.layani.lior.repository.DoctorRepository;
 
-@Service(value = "doctorService")
+@Service
 public class DoctorServiceImpl implements DoctorService {
 
 	@Autowired
 	DoctorRepository repo;
+
+	@Autowired
+	VisitService visitService;
 
 	@Override
 	public List<Doctor> getAllDoctor() {
@@ -21,8 +24,8 @@ public class DoctorServiceImpl implements DoctorService {
 	}
 
 	@Override
-	public Doctor postCreateNewDoctor(Doctor newDoctor) {
-		return repo.save(newDoctor);
+	public Doctor postCreateNewDoctor(Doctor doctor) {
+		return repo.save(doctor);
 	}
 
 	@Override
@@ -39,6 +42,15 @@ public class DoctorServiceImpl implements DoctorService {
 	@Override
 	public void deleteOneDoctor(int id) {
 		repo.deleteById(id);
+	}
+
+	@Override
+	public void updateLastVisitField(int id) {
+		Doctor doctor = getOneDoctor(id);
+		visitService.getAllVisit().stream().filter(v -> v.getDoctorId() == doctor.getId()).sorted().findFirst()
+				.ifPresentOrElse(v -> doctor.setLastVisitId(v.getId()), () -> doctor.setLastVisitId(0));
+
+		putUpdateOneDoctor(doctor, doctor.getId());
 	}
 
 }

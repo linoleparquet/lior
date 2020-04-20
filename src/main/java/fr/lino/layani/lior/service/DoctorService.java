@@ -15,4 +15,6 @@ public interface DoctorService {
 
 	void deleteOneDoctor(int id);
 
+	void updateLastVisitField(int id);
+
 }

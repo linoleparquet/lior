@@ -11,7 +11,7 @@ import lombok.Data;
 
 @Data
 @Entity
-public class Visit implements Comparable {
+public class Visit implements Comparable<Visit> {
 
 	private @Id @GeneratedValue(strategy = GenerationType.IDENTITY) int id;
 	private int doctorId;
@@ -29,7 +29,7 @@ public class Visit implements Comparable {
 	}
 
 	@Override
-	public int compareTo(Object o) {
-		return this.getDate().compareTo(((Visit) o).getDate());
+	public int compareTo(Visit o) {
+		return this.getDate().compareTo(o.getDate());
 	}
 }
