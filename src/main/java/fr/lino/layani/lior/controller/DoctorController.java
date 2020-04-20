@@ -29,15 +29,15 @@ public class DoctorController {
 		return doctorService.getAllDoctor();
 	}
 
-	@PostMapping
-	public Doctor postCreateNewDoctor(@RequestBody Doctor doctor) {
-		return doctorService.postCreateNewDoctor(doctor);
-	}
-
 	@GetMapping("/{id}")
 	public Doctor getOneDoctor(@PathVariable int id) {
 		return doctorService.getOneDoctor(id);
 
+	}
+
+	@PostMapping
+	public Doctor postCreateNewDoctor(@RequestBody Doctor doctor) {
+		return doctorService.postCreateNewDoctor(doctor);
 	}
 
 	@PutMapping("/{id}")

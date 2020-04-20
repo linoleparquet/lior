@@ -3,6 +3,7 @@ package fr.lino.layani.lior.service;
 import java.util.List;
 
 import fr.lino.layani.lior.model.Doctor;
+import fr.lino.layani.lior.model.Visit;
 
 public interface DoctorService {
 	List<Doctor> getAllDoctor();
@@ -15,6 +16,8 @@ public interface DoctorService {
 
 	void deleteOneDoctor(int id);
 
-	void updateLastVisitField(int id);
+	void updateLastVisitNextVisitField(int id);
+
+	public List<Visit> getVisitByDotor(int id);
 
 }

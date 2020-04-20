@@ -30,6 +30,6 @@ public class Visit implements Comparable<Visit> {
 
 	@Override
 	public int compareTo(Visit o) {
-		return this.getDate().compareTo(o.getDate());
+		return o.getDate().compareTo(this.getDate());
 	}
 }

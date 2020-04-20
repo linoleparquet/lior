@@ -6,7 +6,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import fr.lino.layani.lior.exception.VisitNotFoundException;
-import fr.lino.layani.lior.model.Doctor;
 import fr.lino.layani.lior.model.Visit;
 import fr.lino.layani.lior.repository.VisitRepository;
 
@@ -31,27 +30,11 @@ public class VisitServiceImpl implements VisitService {
 
 	@Override
 	public Visit postCreateNewVisit(Visit visit) {
-		Doctor doctor = doctorService.getOneDoctor(visit.getDoctorId());
-
-		if (doctor.getLastVisitId() != 0) {
-			Visit lastVisit = repo.getOne(doctor.getLastVisitId());
-			if (visit.getDate().isAfter(lastVisit.getDate())) {
-				doctor.setLastVisitId(visit.getId());
-				doctorService.putUpdateOneDoctor(doctor, doctor.getId());
-			}
-		}
 		return repo.save(visit);
 	}
 
 	@Override
 	public Visit putUpdateOneVisit(Visit updatedVisit, int id) {
-		updatedVisit.setId(id);
-		int doctor = getOneVisit(id).getDoctorId();
-		repo.save(updatedVisit);
-
-		doctorService.updateLastVisitField(doctor);
-		doctorService.updateLastVisitField(updatedVisit.getDoctorId());
-
 		return repo.save(updatedVisit);
 	}
 
@@ -59,7 +42,5 @@ public class VisitServiceImpl implements VisitService {
 	public void deleteOneVisit(int id) {
 		repo.deleteById(id);
 	}
-
-	// Helpers
 
 }
