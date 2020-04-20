@@ -2,6 +2,7 @@ package fr.lino.layani.lior.controller;
 
 import java.util.List;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -9,49 +10,43 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import fr.lino.layani.lior.exception.DoctorNotFoundException;
 import fr.lino.layani.lior.model.Doctor;
-import fr.lino.layani.lior.repository.DoctorRepository;
+import fr.lino.layani.lior.service.DoctorService;
 
 @CrossOrigin(origins = "http://localhost:4200")
 @RestController
+@RequestMapping("/doctors")
 public class DoctorController {
 
-	private final DoctorRepository repo;
+	@Autowired
+	private DoctorService doctorService;
 
-	DoctorController(DoctorRepository repo) {
-		this.repo = repo;
-	}
-	// TO-DO: implement HATEOAS
-
-	@GetMapping("/doctors")
+	@GetMapping
 	public List<Doctor> getAllDoctor() {
-		return repo.findAll();
+		return doctorService.getAllDoctor();
 	}
 
-	@PostMapping("/doctor")
-	public Doctor postCreateNewdoctor(@RequestBody Doctor newDoctor) {
-		return repo.save(newDoctor);
+	@PostMapping
+	public Doctor postCreateNewDoctor(@RequestBody Doctor doctor) {
+		return doctorService.postCreateNewDoctor(doctor);
 	}
 
-	@GetMapping("/doctor/{id}")
+	@GetMapping("/{id}")
 	public Doctor getOneDoctor(@PathVariable int id) {
-		return repo.findById(id).orElseThrow(() -> new DoctorNotFoundException(id));
+		return doctorService.getOneDoctor(id);
 
 	}
 
-	@PutMapping("/doctor/{id}")
-	public Doctor putUpdateOneDoctor(@RequestBody Doctor updatedDoctor, @PathVariable int id) {
-		updatedDoctor.setId(id);
-		Doctor doctor = repo.findById(id).orElseThrow(() -> new DoctorNotFoundException(id));
-		doctor = updatedDoctor;
-		return repo.save(doctor);
+	@PutMapping("/{id}")
+	public Doctor putUpdateOneDoctor(@RequestBody Doctor doctor, @PathVariable int id) {
+		return doctorService.putUpdateOneDoctor(doctor, id);
 	}
 
-	@DeleteMapping("/doctor/{id}")
+	@DeleteMapping("/{id}")
 	public void deleteOneDoctor(@PathVariable int id) {
-		repo.deleteById(id);
+		doctorService.deleteOneDoctor(id);
 	}
 }
