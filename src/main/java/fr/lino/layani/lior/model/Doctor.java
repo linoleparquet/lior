@@ -16,19 +16,19 @@ public class Doctor {
 	private @Id @GeneratedValue(strategy = GenerationType.IDENTITY) int id;
 	private String name;
 	private String surname;
-	private String town;
+	private String city;
 	private int departement;
-	private int frequency; // Entier compris entre 1 et 12. tout les frequency mois /ans
+	private int periodicity; // Entier compris entre 1 et 12. tout les frequency mois /ans
 	private int lastVisitId;
 	private LocalDate nextVisitDate;
 
-	public Doctor(String name, String surname, String town, int departement, int frequency) {
+	public Doctor(String name, String surname, String city, int departement, int periodicity) {
 		super();
 		this.name = name;
 		this.surname = surname;
-		this.town = town;
+		this.city = city;
 		this.departement = departement;
-		this.frequency = frequency;
+		this.periodicity = periodicity;
 	}
 
 	public Doctor() {

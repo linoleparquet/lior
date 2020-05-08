@@ -59,7 +59,7 @@ public class DoctorServiceImpl implements DoctorService {
 				.findFirst().orElse(null);
 
 		if (lastVisit != null) {
-			nextVisitDate = lastVisit.getDate().plusMonths(doctor.getFrequency());
+			nextVisitDate = lastVisit.getDate().plusMonths(doctor.getPeriodicity());
 			doctor.setLastVisitId(lastVisit.getId());
 		}
 
