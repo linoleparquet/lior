@@ -10,4 +10,7 @@ class LiorApplicationTests {
 	void contextLoads() {
 	}
 
+	@Test
+	void addADoctor() {
+	}
 }

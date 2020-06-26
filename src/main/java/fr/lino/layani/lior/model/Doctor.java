@@ -17,17 +17,17 @@ public class Doctor {
 	private String name;
 	private String surname;
 	private String city;
-	private int departement;
+	private int department;
 	private int periodicity; // Entier compris entre 1 et 12. tout les frequency mois /ans
 	private int lastVisitId;
 	private LocalDate nextVisitDate;
 
-	public Doctor(String name, String surname, String city, int departement, int periodicity) {
+	public Doctor(String name, String surname, String city, int department, int periodicity) {
 		super();
 		this.name = name;
 		this.surname = surname;
 		this.city = city;
-		this.departement = departement;
+		this.department = department;
 		this.periodicity = periodicity;
 	}
 
