@@ -1,3 +1,5 @@
+
+# BACKEND
 ./backend/HELP.md
 ./backend/target/
 !./backend/.mvn/wrapper/maven-wrapper.jar
@@ -15,3 +17,13 @@
 
 ### VS Code ###
 ./backend/.vscode/
+
+
+#FRONTEND
+# compiled output
+/frontend/dist
+/frontend/tmp
+/frontend/out-tsc
+
+# dependencies
+/frontend/node_modules
