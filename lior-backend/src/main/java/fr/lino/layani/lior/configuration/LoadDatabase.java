@@ -47,26 +47,26 @@ public class LoadDatabase {
 				"Lorem ipsum dolor sit amet consectetur adipisicing elit. veniam a. Dolor, at assumenda provident fugiat quod, delectus atque accusamus aliquid consequatur hic adipisci dignissimos minus molestiae maxime.");
 
 		return args -> {
-			log.info("Loading Doctor Table");
-			log.info("Preloading " + doctorRepository.save(doctor1));
-			log.info("Preloading " + doctorRepository.save(doctor2));
-			log.info("Preloading " + doctorRepository.save(doctor3));
-			log.info("Preloading " + doctorRepository.save(doctor4));
-			log.info("Preloading " + doctorRepository.save(doctor5));
-			log.info("Preloading " + doctorRepository.save(doctor6));
-			log.info("Preloading " + doctorRepository.save(doctor7));
-
-			log.info("Loading Visit Table");
-			log.info("Preloading " + visitRepository.save(visit1));
-			log.info("Preloading " + visitRepository.save(visit2));
-			log.info("Preloading " + visitRepository.save(visit3));
-			log.info("Preloading " + visitRepository.save(visit4));
-			log.info("Preloading " + visitRepository.save(visit5));
-			log.info("Preloading " + visitRepository.save(visit6));
-			log.info("Preloading " + visitRepository.save(visit7));
-			log.info("Preloading " + visitRepository.save(visit8));
-			log.info("Preloading " + visitRepository.save(visit9));
-			log.info("Preloading " + visitRepository.save(visit10));
+//			log.info("Loading Doctor Table");
+//			log.info("Preloading " + doctorRepository.save(doctor1));
+//			log.info("Preloading " + doctorRepository.save(doctor2));
+//			log.info("Preloading " + doctorRepository.save(doctor3));
+//			log.info("Preloading " + doctorRepository.save(doctor4));
+//			log.info("Preloading " + doctorRepository.save(doctor5));
+//			log.info("Preloading " + doctorRepository.save(doctor6));
+//			log.info("Preloading " + doctorRepository.save(doctor7));
+//
+//			log.info("Loading Visit Table");
+//			log.info("Preloading " + visitRepository.save(visit1));
+//			log.info("Preloading " + visitRepository.save(visit2));
+//			log.info("Preloading " + visitRepository.save(visit3));
+//			log.info("Preloading " + visitRepository.save(visit4));
+//			log.info("Preloading " + visitRepository.save(visit5));
+//			log.info("Preloading " + visitRepository.save(visit6));
+//			log.info("Preloading " + visitRepository.save(visit7));
+//			log.info("Preloading " + visitRepository.save(visit8));
+//			log.info("Preloading " + visitRepository.save(visit9));
+//			log.info("Preloading " + visitRepository.save(visit10));
 
 		};
 	}

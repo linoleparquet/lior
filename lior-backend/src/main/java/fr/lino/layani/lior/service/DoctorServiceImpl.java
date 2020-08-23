@@ -53,17 +53,15 @@ public class DoctorServiceImpl implements DoctorService {
 	@Override
 	public void updateLastVisitNextVisitField(int id) {
 		Doctor doctor = repo.findById(id).orElseThrow(() -> new DoctorNotFoundException(id));
-		LocalDate nextVisitDate = LocalDate.now();
 
 		Visit lastVisit = visitService.getAllVisit().stream().filter(v -> v.getDoctorId() == doctor.getId()).sorted()
 				.findFirst().orElse(null);
 
 		if (lastVisit != null) {
-			nextVisitDate = lastVisit.getDate().plusMonths(doctor.getPeriodicity());
+			LocalDate nextVisitDate = lastVisit.getDate().plusMonths(doctor.getPeriodicity());
 			doctor.setLastVisitId(lastVisit.getId());
+			doctor.setNextVisitDate(nextVisitDate);
 		}
-
-		doctor.setNextVisitDate(nextVisitDate);
 
 		putUpdateOneDoctor(doctor, doctor.getId());
 	}
