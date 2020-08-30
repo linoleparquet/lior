@@ -19,7 +19,7 @@ public class Doctor {
 	private String city;
 	private int department;
 	private int periodicity; // Entier compris entre 1 et 12. tout les frequency mois /ans
-	private int lastVisitId;
+	private Integer lastVisitId;
 	private LocalDate nextVisitDate;
 
 	public Doctor(String name, String surname, String city, int department, int periodicity) {

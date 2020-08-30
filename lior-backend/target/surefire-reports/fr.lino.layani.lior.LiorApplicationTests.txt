@@ -1,4 +1,4 @@
 -------------------------------------------------------------------------------
 Test set: fr.lino.layani.lior.LiorApplicationTests
 -------------------------------------------------------------------------------
-Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 16.713 s - in fr.lino.layani.lior.LiorApplicationTests
+Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 10.94 s - in fr.lino.layani.lior.LiorApplicationTests

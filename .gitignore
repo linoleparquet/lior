@@ -1,29 +1,29 @@
 
 # BACKEND
-./lior-backend/HELP.md
-./lior-backend/target/
-!./lior-backend/.mvn/wrapper/maven-wrapper.jar
+lior-backend/HELP.md
+lior-backend/target
+!lior-backend/.mvn/wrapper/maven-wrapper.jar
 !**/src/main/**
 !**/src/test/**
 
 ### STS ###
-./lior-backend/.apt_generated
-./lior-backend/.classpath
-./lior-backend/.factorypath
-./lior-backend/.project
-./lior-backend/.settings
-./lior-backend/.springBeans
-./lior-backend/.sts4-cache
+lior-backend/.apt_generated
+lior-backend/.classpath
+lior-backend/.factorypath
+lior-backend/.project
+lior-backend/.settings
+lior-backend/.springBeans
+lior-backend/.sts4-cache
 
 ### VS Code ###
-./lior-backend/.vscode/
+lior-backend/.vscode/
 
 
 #FRONTEND
 # compiled output
-/lior-frontend/dist
-/lior-frontend/tmp
-/lior-frontend/out-tsc
+lior-frontend/dist
+lior-frontend/tmp
+lior-frontend/out-tsc
 
 # dependencies
-/frontend/node_modules
+lior-frontend/node_modules
