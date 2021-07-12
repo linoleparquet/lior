@@ -10,13 +10,14 @@
 - Enhance database integration
 - add a README.md
 - populate database at startup
+- harmonize Java version (maven prop file, dockerfile)
 
 ## Packaging
 - Create a Makefile
 
 ## Docker
 - Remplace `COPY` steps by actually building the application in the Dockerfile
-- Push the image to the repository, and update the docs
+- Update the docs
 
 ## Other
 - Add picture on the README.md file 

@@ -12,27 +12,10 @@ xxx Add a photo xxx
 
 ## Installation
 
-### The easy way
+Run `docker-compose up`.
+Wait for docker to build both frontend and backend images. 
+The application will be available at `http://localhost`
 
-Use the docker image available at `xxxxx`
-`docker run -p 8080:8080 linoleparquet/lior`
-
-### The hard way
-
-Build and run the jar:
-```bash
-jar cf lior-backend.jar lior-backend/src (or something like that lol)
-java -jar lior-backend.jar
-```
-
-Build and run the angular application
-```
-npm i 
-npm start
-```
-
-Java v1.8
-Node v10
 
 ## Usage
 

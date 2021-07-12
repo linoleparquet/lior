@@ -1,0 +1,12 @@
+version: "3.9"
+services:
+  frontend:
+    image: lior-frontend
+    # build: frontend/
+    ports:
+      - "80:80"
+  bakckend:
+    image: lior-backend
+    # build: backend/
+    ports:
+      - "8080:8080"
