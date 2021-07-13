@@ -1,22 +1,23 @@
 # What's to do today ?
 
 ## Frontend
-- Remove all electron references
 - Simplify the GUI
 - Add explantations
 - Add a README.md
+- Integrate the `find route` component on the dashboard 
+- Integrate [leaflet motion](https://github.com/Igor-Vladyka/leaflet.motion) module
 
 ## Backend
 - Enhance database integration
 - add a README.md
-- populate database at startup
 - harmonize Java version (maven prop file, dockerfile)
+- Add the possibility to select the main destination
+- Integrate as a settings 'EARLIEST ARRIVAL, LATEST ARRIVAL, WAITING TIME, MAX_DESTINATION_PER_DAY, HOME LOCALISATION'
 
 ## Packaging
 - Create a Makefile
 
 ## Docker
-- Remplace `COPY` steps by actually building the application in the Dockerfile
 - Update the docs
 
 ## Other
