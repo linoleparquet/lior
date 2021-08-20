@@ -19,7 +19,9 @@ The application will be available at `http://localhost`
 
 ## Usage
 
-To document
+Enshure ports 80 and 8080 are not allocated
+Run the application by launching `docker-compose up`
+Visit `http://localhost`
 
 ## Contributing
 Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.

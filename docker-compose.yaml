@@ -1,12 +1,10 @@
 version: "3.9"
 services:
   frontend:
-    image: lior-frontend
-    # build: frontend/
+    image: ghcr.io/linoleparquet/lior-frontend:master
     ports:
       - "80:80"
   bakckend:
-    image: lior-backend
-    # build: backend/
+    image: ghcr.io/linoleparquet/lior-backend:master
     ports:
       - "8080:8080"
