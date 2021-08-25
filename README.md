@@ -4,6 +4,8 @@ Lior is a [CRM](https://www.salesforce.com/crm/what-is-crm/) tool tailored for m
 
 The backend part is in Java using the Spring framework, and the frontend part is in JS using the Angular framework.
 
+![Lior's interface](images/lior-interface.gif)
+
 ## Main features 
 - Find a route
 - Remind which docter you need to see 
@@ -30,3 +32,4 @@ Please make sure to update tests as appropriate.
 
 ## License
 [MIT](https://choosealicense.com/licenses/mit/)
+
