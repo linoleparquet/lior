@@ -1,10 +1,21 @@
-version: "3.9"
+version: "3.3"
 services:
   frontend:
-    image: ghcr.io/linoleparquet/lior-frontend:master
+    container_name: lior-frontend
+    image: ghcr.io/linoleparquet/lior-frontend:backend-reverse-proxy
     ports:
       - "80:80"
-  bakckend:
+    networks:
+      - frontend
+  backend:
+    container_name: lior-backend
     image: ghcr.io/linoleparquet/lior-backend:master
     ports:
       - "8080:8080"
+    networks:
+      - frontend
+      - backend
+
+networks:
+  frontend:
+  backend:

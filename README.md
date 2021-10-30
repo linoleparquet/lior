@@ -17,18 +17,22 @@ The lone backend container can be pulled from this command: `docker pull ghcr.io
 The [frontend part](https://github.com/linoleparquet/lior-frontend) is coded in HTML/CSS/JavaScipt using the Angular framework.
 The lone frontend container can be pulled from this command: `docker pull ghcr.io/linoleparquet/lior-backend:master`
 
-
-### Prerequise 
-
-You need to have [docker](https://www.docker.com/) installed on your machine. 
-
 ### Installation
 
-- Pull the project 
-- Enshure ports 80 and 8080 are not allocated
-- Run `docker-compose up`.
-- The application will be available at `http://localhost`
+### Docker compose
+You need to have [docker](https://www.docker.com/) installed on your machine. 
 
+``` docker-compose up -d```
+
+### Kubernetes
+
+You need to have [Kubernetes](https://kubernetes.io/fr/) installed on your cluster, and [Helm](https://helm.sh/) installed on your machine.
+
+https://helm.sh/
+
+``` helm install lior ./lior-helm --namespace=lior-helm --create-namespace ```
+
+Caution: The nameof the chart must be `lior`. The nginx configuration require that.
 
 ## Contributing
 Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.

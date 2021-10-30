@@ -1,0 +1,17 @@
+{{- if .Values.frontend.enabled -}}
+apiVersion: v1
+kind: Service
+metadata:
+  name: {{ include "lior.fullname" . }}-frontend
+  labels:
+    {{- include "lior.labels" . | nindent 4 }}-frontend
+spec:
+  type: {{ .Values.frontend.service.type }}
+  ports:
+    - port: {{ .Values.frontend.service.port }}
+      targetPort: http
+      protocol: TCP
+      name: http
+  selector:
+    {{- include "lior.selectorLabels" . | nindent 4 }}-frontend
+{{- end }}

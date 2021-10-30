@@ -1,0 +1,17 @@
+{{- if .Values.backend.enabled -}}
+apiVersion: v1
+kind: Service
+metadata:
+  name: {{ include "lior.fullname" . }}-backend
+  labels:
+    {{- include "lior.labels" . | nindent 4 }}-backend
+spec:
+  type: {{ .Values.backend.service.type }}
+  ports:
+    - port: {{ .Values.backend.service.port }}
+      targetPort: 8080
+      protocol: TCP
+      name: http
+  selector:
+    {{- include "lior.selectorLabels" . | nindent 4 }}-backend
+{{- end }}
