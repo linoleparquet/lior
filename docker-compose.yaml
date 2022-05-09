@@ -10,12 +10,30 @@ services:
   backend:
     container_name: lior-backend
     image: ghcr.io/linoleparquet/lior-backend:v1.0.0
+    restart: on-failure
+    depends_on:
+      - db
+    environment:
+      - SPRING_DATASOURCE_URL=jdbc:postgresql://db:5432/lior-db
+      - SPRING_DATASOURCE_USERNAME=username
+      - SPRING_DATASOURCE_PASSWORD=password
+      - SPRING_JPA_HIBERNATE_DDL_AUTO=update
     ports:
       - "8080:8080"
     networks:
       - frontend
       - backend
-
+  db:
+    container_name: db
+    image: postgres:latest
+    environment:
+      - POSTGRES_USER=username
+      - POSTGRES_PASSWORD=password
+      - POSTGRES_DB=lior-db
+    ports:
+      - "5432:5432"
+    networks:
+      - backend
 networks:
   frontend:
   backend:
