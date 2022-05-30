@@ -59,9 +59,8 @@ Requirements:
 [Kubernetes](https://kubernetes.io/fr/) needs to be installed on your cluster. [Git](git.com) and [Helm](https://helm.sh/) needs to be installed on the machine.
 
 ```
-git clone https://github.com/linoleparquet/lior
-cd lior
-helm install lior ./lior-helm --namespace=lior-helm --create-namespace 
+git clone https://github.com/linoleparquet/lior --depth 1
+helm install lior lior/lior-helm --namespace=lior --create-namespace 
 ```
 
 Caution: The name of the chart cannot be changed for now: it must remain `lior`. The nginx configuration require that.
