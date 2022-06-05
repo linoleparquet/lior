@@ -6,7 +6,7 @@ metadata:
   labels:
     {{- include "lior.labels" . | nindent 4 }}-frontend
 spec:
-  type: {{ .Values.frontend.service.type }}
+  type: {{ if .Values.ingress.enabled }}ClusterIP{{ else }}{{ .Values.frontend.service.type }}{{ end }}
   ports:
     - port: {{ .Values.frontend.service.port }}
       targetPort: http
