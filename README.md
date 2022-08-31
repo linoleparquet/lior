@@ -70,8 +70,6 @@ git clone https://github.com/linoleparquet/lior --depth 1
 helm install lior lior/helm --namespace=lior --create-namespace
 ```
 
-Caution: The name of the chart cannot be changed for now: it must remain `lior`. The nginx configuration require that.
-
 ## Contributing
 
 Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
