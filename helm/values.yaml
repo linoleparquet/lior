@@ -9,7 +9,7 @@ frontend:
   image:
     repository: ghcr.io/linoleparquet/lior-frontend
     pullPolicy: IfNotPresent
-    tag: v1.0.0
+    tag: v1.1.1
   service:
     type: LoadBalancer
     port: 80
