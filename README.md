@@ -67,7 +67,8 @@ Requirements:
 
 ```
 git clone https://github.com/linoleparquet/lior --depth 1
-helm install lior lior/helm --namespace=lior --create-namespace
+cd lior
+helm install lior chart --namespace=lior --create-namespace
 ```
 
 ## Contributing
