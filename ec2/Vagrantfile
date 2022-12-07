@@ -1,0 +1,17 @@
+# -*- mode: ruby -*-
+# vi: set ft=ruby :
+
+ENV['VAGRANT_DEFAULT_PROVIDER'] = 'libvirt'
+
+Vagrant.configure("2") do |config|
+
+  # DEV-MASTER
+  config.vm.define "ec2-instance" do |c|
+    config.vm.box = "jaredeh/amazonlinux2"
+    c.vm.hostname = "ec2-instance"
+    c.vm.network "private_network", ip: "192.168.34.10"
+
+    c.vm.provision "shell", path: "user-data.sh"
+  end
+  
+end
