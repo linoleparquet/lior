@@ -7,10 +7,10 @@ The tool enables a frictionless smart envrionment in the management and executio
 
 ## Main features
 
-- Client Database
-- Schedule Optimization
-- Route Optimization
-- Other custom features such as: Notes, Reminders, Calendar, etc
+- Client Database 👨‍🦱
+- Schedule Optimization ⏱
+- Route Optimization 🚗
+- Other custom features such as: Notes, Reminders, Calendar, etc 📃
 
 ## Demonstration
 
@@ -47,11 +47,11 @@ The lone backend container can be pulled from this command: `docker pull ghcr.io
 The [frontend part](https://github.com/linoleparquet/lior-frontend) is an Angular project.
 The lone frontend container can be pulled from this command: `docker pull ghcr.io/linoleparquet/lior-backend`
 
-### Deployment
+## Deployment
 
 The application can be deployed using two ways: Docker Compose or Kubernetes.
 
-### Docker compose
+### Docker Compose
 
 Requirement:
 [Git](git.com), [Docker](https://www.docker.com/) and [Docker-Compose](https://docs.docker.com/compose/) need to be installed on your machine.
