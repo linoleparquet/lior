@@ -1,4 +1,4 @@
-<img src="images/logo.png" style="width:15%;height:15%;" align="right" />
+<img src="images/logo.png" style="width:20%;height:20%;" align="right" />
 
 # Lior: A CRM for Medical Sales Representatives
 
@@ -14,7 +14,7 @@ The tool enables a frictionless smart envrionment in the management and executio
 
 ## Demonstration
 
-<img src="images/lior-interface.gif" style="width:75%;height:75%;" alt="Lior's interface" class="center" />
+![Lior's interface](images/lior-interface.gif)
 
 ## How to use the application?
 
