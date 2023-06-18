@@ -7,7 +7,7 @@ This folder contains all necessary configuration to deploy Lior on a EC2 instanc
 a Vagrantfile is available on this folder to simulate a EC2 instance.
 To deploy the vagrant box, open a terminal on this folder and run `vagrant up`
 
-# Deploying Lior
+## Deploying Lior
 
 Once a EC2 instance is available, on AWS or on your local machine, ssh into it.
 Then execute the `user-data.sh` script.
