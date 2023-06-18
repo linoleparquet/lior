@@ -1,8 +1,9 @@
-# Lior
+<img src="images/logo.png" style="width:15%;height:15%;" align="right" />
 
-Lior is a [CRM](https://www.salesforce.com/crm/what-is-crm/) tool tailored specifically for use by medical sales representatives. The tool enables a frictionless smart envrionment in the management and execution for client scheduling and route optimization.
+# Lior: A CRM for Medical Sales Representatives
 
-![Lior's interface](images/lior-interface.gif)
+Lior is a [CRM](https://www.salesforce.com/crm/what-is-crm/) tool tailored specifically for use by **medical sales representatives**.  
+The tool enables a frictionless smart envrionment in the management and execution for **client scheduling** and **route optimization**.
 
 ## Main features
 
@@ -10,6 +11,10 @@ Lior is a [CRM](https://www.salesforce.com/crm/what-is-crm/) tool tailored speci
 - Schedule Optimization
 - Route Optimization
 - Other custom features such as: Notes, Reminders, Calendar, etc
+
+## Demonstration
+
+<img src="images/lior-interface.gif" style="width:75%;height:75%;" alt="Lior's interface" class="center" />
 
 ## How to use the application?
 
