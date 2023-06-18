@@ -7,10 +7,10 @@ The tool enables a frictionless smart envrionment in the management and executio
 
 ## Main features
 
-- Client Database 👨‍🦱
-- Schedule Optimization ⏱
-- Route Optimization 🚗
-- Other custom features such as: Notes, Reminders, Calendar, etc 📃
+- 👨‍🦱 Client Database
+- ⏱ Schedule Optimization
+- 🚗 Route Optimization
+- 📃 Other custom features such as: Notes, Reminders, Calendar, etc
 
 ## Demonstration
 
