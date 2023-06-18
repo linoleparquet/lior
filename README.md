@@ -14,9 +14,11 @@ The tool enables a frictionless smart envrionment in the management and executio
 
 ## Demonstration
 
-![Lior's interface](images/lior-interface.gif)
+![Route Display](images/route-display.gif)
 
 ## How to use the application?
+
+![Lior's interface](images/dashboard.png)
 
 ### Step 1
 
